@@ -1,0 +1,17 @@
+Based on Aging, Below is Date Range
+=IF(RC[-1]<=30,"Below 30 days",IF(AND(RC[-1]>30,RC[-1]<60),"Above 30 days",IF(AND(RC[-1]>60,RC[-1]<90),"Above 60 days",IF(RC[-1]>90,"Above 90 days",))))
+Below is Month Range, Last Detected - First Detected
+=IF(M2="Fixed","Fixed",
+IF(X2<=30,"Open this month",
+IF(AND(X2>30,X2<=60),"Open since 2 months",
+IF(AND(X2>60,X2<=90),"Open since 3 months",
+IF(AND(X2>90,X2<=120),"Open since 4 months",
+IF(AND(X2>120,X2<=150),"Open since 5 months",
+IF(AND(X2>150,X2<=180),"Open since 6 months",
+IF(AND(X2>180,X2<=210),"Open since 7 months",
+IF(AND(X2>210,X2<=240),"Open since 8 months",
+IF(AND(X2>240,X2<=270),"Open since 9 months",
+IF(AND(X2>270,X2<=300),"Open since 10 months",
+IF(AND(X2>300,X2<=330),"Open since 11 months",
+IF(AND(X2>330,X2<=365),"Open since 12 months",
+IF(X2>365,"Open for more than 1 year",""))))))))))))))
